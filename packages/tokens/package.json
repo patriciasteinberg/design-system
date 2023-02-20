@@ -2,10 +2,13 @@
   "name": "@ignite-ui/tokens",
   "version": "1.0.0",
   "description": "- [ ] Text\r - [ ] Heading\r - [ ] Box\r - [ ] Button\r - [ ] TextInput\r - [ ] TextArea\r - [ ] Checkbox\r - [ ] Avatar\r - [ ] Multistep",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts",
-    "dev": "tsup src/index.ts --format esm,cjs --dts --watch"
+    "dev": "tsup src/index.ts --format esm,cjs --dts --watch",
+    "lint": "eslint src/**/*.ts* --fix"
   },
   "repository": {
     "type": "git",
@@ -13,12 +16,14 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/patriciasteinberg/design-system/issues"
   },
   "homepage": "https://github.com/patriciasteinberg/design-system#readme",
   "devDependencies": {
+    "@ignite-ui/ts-config": "*",
+    "@ignite-ui/eslint-config": "*",
     "tsup": "^6.6.3",
     "typescript": "^4.9.5"
   }
